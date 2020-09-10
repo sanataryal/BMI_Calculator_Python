@@ -1,0 +1,33 @@
+
+import webbrowser as wb
+
+f_n = input ("Please enter your first name: ").strip()
+l_n = input ("Please enter your last name: ").strip()
+ans = input (f'Hello,{f_n} Do you want to proceed with your BMI calculation? (Y/N): ')
+if ans== "N":
+    print("Thank You for your visit")
+else:
+    an = input(f'{f_n}, do you like to enter data in Kg and Meters or Lbs and Inches? (KgMt/ LbIn): ')
+    if an == "KgMt":
+        wt_kg = int(input("Please enter your weight in Kg: "))
+        ht_mt = int(input ("Please enter your weight in Mt: "))
+        BMI_1 = wt_kg / (ht_mt**2)
+        print(f'{f_n}, your BMI is: {BMI_1}.')
+        chart=input("Please check below to see what your BMI all about. Do you want to proceed? (Y/N): ")
+        if chart == "Y":
+            wb.open("https://www.ucsfhealth.org/education/body-mass-index-chart")
+        else:
+            print("Thank You for using my app")
+    else:
+        wt_lb = int(input("Please enter your weight in Lbs: "))
+        ht_in = int (input("Please enter your height in Inches: "))
+        BMI_2 = 703* wt_lb / (ht_in)**2
+        print(f'{f_n}, your BMI is: {BMI_2}.')
+        chart = input("Please check below to see what your BMI all about. Do you want to proceed? (Y/N): ")
+        if chart == "Y":
+            wb.open("https://www.ucsfhealth.org/education/body-mass-index-chart")
+        else:
+            print("Thank You for using my app")
+
+
+
