@@ -15,7 +15,7 @@ else:
         print(f'{f_n}, your BMI is: {BMI_1}.')
         chart=input("Please check below to see what your BMI all about. Do you want to proceed? (Y/N): ")
         if chart == "Y":
-            wb.open("https://www.ucsfhealth.org/education/body-mass-index-chart")
+            wb.open("https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_tbl.htm")
         else:
             print("Thank You for using my app")
     else:
